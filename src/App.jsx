@@ -6,7 +6,7 @@ import TicTacTo from './projeck/TicTacTo'
 const App = () => {
   return (
     <Routes>
-      <Route path='/' element={<TicTacTo/>}/>
+      <Route path='/' element={<CardContack/>}/>
     </Routes>
   )
 }

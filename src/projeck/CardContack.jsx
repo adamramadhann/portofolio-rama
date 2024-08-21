@@ -18,6 +18,7 @@ const CardContact = () => {
         }
     }
 
+
     // Fungsi untuk toggle form
     function handleBtn() {
         setBtn(prev => !prev)
@@ -41,7 +42,8 @@ const CardContact = () => {
             fetchAPI() // Mengambil data yang baru
             handleBtn() // Menutup form setelah submit
         }
-    }
+        }
+    
 
 
     // membuat fungsi fungcion delete 
@@ -108,7 +110,7 @@ const CardContact = () => {
             </div>
 
             {/* Form untuk menambah data */}
-            <div className={`w-full h-full absolute top-0 right-1 left-1 flex justify-center items-center p-5 ${btn ? "hidden" : "block"}`}>
+            <div className={`w-screen h-screen absolute top-0 right-1 left-1 flex justify-center items-center p-5 ${btn ? "hidden" : "block"}`}>
                 <div className='h-[35%] w-[60%] bg-slate-50 flex items-center justify-center shadow-lg rounded-md'>
                     <form className='flex flex-col relative w-[200px] h-[300px]' onSubmit={handleForm}>
                         <div className='flex flex-col mb-5 mt-6'>
