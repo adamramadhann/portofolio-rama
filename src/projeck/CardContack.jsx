@@ -110,7 +110,7 @@ const CardContact = () => {
             </div>
 
             {/* Form untuk menambah data */}
-            <div className={`w-screen h-screen absolute top-0 right-1  flex justify-center items-center p-5 ${btn ? "hidden" : "block"}`}>
+            <div className={`w-full h-[100dvh] absolute top-0 right-1  flex justify-center items-center p-5 ${btn ? "hidden" : "block"}`}>
                 <div className='h-[35%] w-[60%] bg-slate-50 flex items-center justify-center shadow-lg rounded-md'>
                     <form className='flex flex-col relativxe w-[200px] h-[300px]' onSubmit={handleForm}>
                         <div className='flex flex-col mb-5 mt-6'>
@@ -122,7 +122,7 @@ const CardContact = () => {
                         <button type='submit' className='p-1 px-3 bg-blue-500 text-white mt-3'>Submit</button>
                     </form>
                 </div>
-                <button onClick={handleBtn} className='absolute right-3 top-3 p-1 px-3 bg-red-500 text-white'>Close</button>
+                <button onClick={handleBtn} className='absolute right-0 top-1 p-2 px-4 bg-red-500 text-white z-20'>Close</button>
             </div>
         </section>
     )
