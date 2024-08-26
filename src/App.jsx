@@ -5,9 +5,7 @@ import Login from './projeck/dashboard/Login'
 import Register from './projeck/dashboard/Register'
 import Layout from './projeck/Layout'
 import TicTacTo from './projeck/TicTacTo'
-
-
-
+import CardContact from './projeck/CardContack'
 
 const App = () => {
 
@@ -27,29 +25,24 @@ const App = () => {
     return () => subscription.unsubscribe()
   }, [])
 
-
-  
-  if(!session) {
+  if (!session) {
     return (
       <Routes>
-        <Route path='/' element={<Login/>} />
-        <Route path='/register' element={<Register/>}/>
+        <Route path='/' element={<Login />} />
+        <Route path='/register' element={<Register />} />
       </Routes>
     )
   }
 
-  return(
+  return ( 
     <Routes>
-      <Route path='/' element={<Layout/>}>
-        <Route index element={<h1>Dashboard</h1>} />
-        <Route path='/tictacto' element={<TicTacTo/>}/>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<h1>Heyy Brroo Welcome To MY Projeck</h1>} />
+        <Route path='card' element={<CardContact/>} />
+        <Route path='tictacto' element={<TicTacTo />} />
       </Route>
     </Routes>
   )
-
-
 }
 
 export default App
-
-

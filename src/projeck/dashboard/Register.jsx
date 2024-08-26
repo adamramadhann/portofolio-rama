@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import {  NavLink } from 'react-router-dom'
 import supabase from '../../supabase'
 
 
 const Register = () => {
 
   const [loading, setLoading] = useState(false)
+  const [bdr, setBdr] = useState(false)
 
   function handleSubmit(e) {
 
@@ -18,6 +19,8 @@ const Register = () => {
     if(password !== rePassword) {
       alert('password dan repassword harus sama ')
       return
+    } else if ( password <= 8 ) {
+      alert('password harus memiliki 8 charackter')
     }
 
     setLoading(true)
@@ -59,7 +62,7 @@ const Register = () => {
           <form onSubmit={handleSubmit} className='flex flex-col w-[80%] gap-2 mt-3 '>
 
             <label htmlFor="email">Email :</label>
-            <input type="email" id='email' placeholder='Masukan email anda' className='border w-full h-10 p-2 mb-3' />
+            <input type="email" id='email' placeholder='Masukan email anda' className={`border w-full h-10 p-2 mb-3 ${bdr ? 'border-blue-500' : 'border-red-500'}`} />
 
             <label htmlFor="password">password :</label>
             <input type="password" id='password' placeholder='Masukan password anda' className='border w-full h-10 p-2 mb-3' />

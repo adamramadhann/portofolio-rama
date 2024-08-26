@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import supabase from '../supabase'
 
 const CardContact = () => {
-    const [btn, setBtn] = useState(false)
+    const [btn, setBtn] = useState(true)
     const [data, setData] = useState([])
     const [refresh, setRefresh] = useState(false)
 
@@ -110,9 +110,9 @@ const CardContact = () => {
             </div>
 
             {/* Form untuk menambah data */}
-            <div className={`w-screen h-screen absolute top-0 right-1 left-1 flex justify-center items-center p-5 ${btn ? "hidden" : "block"}`}>
+            <div className={`w-screen h-screen absolute top-0 right-1  flex justify-center items-center p-5 ${btn ? "hidden" : "block"}`}>
                 <div className='h-[35%] w-[60%] bg-slate-50 flex items-center justify-center shadow-lg rounded-md'>
-                    <form className='flex flex-col relative w-[200px] h-[300px]' onSubmit={handleForm}>
+                    <form className='flex flex-col relativxe w-[200px] h-[300px]' onSubmit={handleForm}>
                         <div className='flex flex-col mb-5 mt-6'>
                             <label htmlFor="userName">User Name:</label>
                             <input type="text" name='nama' placeholder='Masukan nama anda' />
