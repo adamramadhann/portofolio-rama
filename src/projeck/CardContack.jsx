@@ -111,7 +111,7 @@ const CardContact = () => {
 
             {/* Form untuk menambah data */}
             <div className={`w-full h-[100dvh] absolute top-0 right-1  flex justify-center items-center p-5 ${btn ? "hidden" : "block"}`}>
-                <div className='h-[35%] w-[60%] bg-slate-50 flex items-center justify-center shadow-lg rounded-md'>
+                <div className='h-[50%] w-[70%] bg-slate-50 flex items-center justify-center shadow-lg rounded-md'>
                     <form className='flex flex-col relativxe w-[200px] h-[300px]' onSubmit={handleForm}>
                         <div className='flex flex-col mb-5 mt-6'>
                             <label htmlFor="userName">User Name:</label>

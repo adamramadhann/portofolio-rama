@@ -13,7 +13,6 @@ const Layout = ( ) => {
   //   set
   // }
 
-
   // Fungsi untuk menangani logout
   function handleLogOut() {
 
@@ -25,7 +24,7 @@ const Layout = ( ) => {
         if(res.error) {
           console.info(res)
         } else {
-          navigate('/')
+          return
         }
       })
   }
@@ -40,6 +39,11 @@ const Layout = ( ) => {
     {
       halaman : `Card `,
       to : '/card',
+      action : () => { setClick(true)}
+    },
+    {
+      halaman : `Dahareun `,
+      to : '/dahareun',
       action : () => { setClick(true)}
     },
     {
